@@ -1,5 +1,6 @@
 .metadata
 bin/
+Debug/
 tmp/
 *.tmp
 *.bak
@@ -94,3 +95,6 @@ target_wrapper.*
 
 # QtCreator CMake
 CMakeLists.txt.user*
+
+# Doxygen HTML output
+html
