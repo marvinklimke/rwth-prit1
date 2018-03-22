@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>702</width>
+    <height>611</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>StreetPlanner</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="6" column="0">
+       <widget class="QRadioButton" name="rbRoutingDistance">
+        <property name="text">
+         <string>Distance in km</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0">
+       <widget class="QRadioButton" name="rbRoutingTime">
+        <property name="text">
+         <string>Travelling time in h</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="lblRoutingPreference">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Routing Preference:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" rowspan="10">
+       <widget class="QGraphicsView" name="graphicsView"/>
+      </item>
+      <item row="8" column="0" rowspan="2">
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="4" column="0">
+       <widget class="QPushButton" name="cmdFindRoute">
+        <property name="text">
+         <string>Find Route between</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QComboBox" name="cbRouteCity2">
+        <property name="editable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QComboBox" name="cbRouteCity1">
+        <property name="editable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="lblRouter">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline;&quot;&gt;Plan a route&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>702</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="actLoadFromDisk"/>
+    <addaction name="actSaveToDisk"/>
+   </widget>
+   <widget class="QMenu" name="menuMap">
+    <property name="title">
+     <string>&amp;Map</string>
+    </property>
+    <addaction name="actAddCity"/>
+    <addaction name="actAddStreet"/>
+    <addaction name="separator"/>
+    <addaction name="actFillMapNrw"/>
+    <addaction name="actClearMap"/>
+   </widget>
+   <widget class="QMenu" name="menuTest">
+    <property name="title">
+     <string>&amp;Test</string>
+    </property>
+    <addaction name="actTestDrawCity"/>
+    <addaction name="actTestDrawMap"/>
+    <addaction name="actTestDrawMapStreets"/>
+    <addaction name="actTestAbstractMap"/>
+    <addaction name="actTestDijkstra"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuMap"/>
+   <addaction name="menuTest"/>
+  </widget>
+  <action name="actAddCity">
+   <property name="text">
+    <string>Add City</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+C</string>
+   </property>
+  </action>
+  <action name="actAddStreet">
+   <property name="text">
+    <string>Add Street</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+A</string>
+   </property>
+  </action>
+  <action name="actFillMapNrw">
+   <property name="text">
+    <string>Fill Map NRW</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+F</string>
+   </property>
+  </action>
+  <action name="actClearMap">
+   <property name="text">
+    <string>Clear Map</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+C</string>
+   </property>
+  </action>
+  <action name="actLoadFromDisk">
+   <property name="text">
+    <string>Load Map from disk</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actSaveToDisk">
+   <property name="text">
+    <string>Save Map to disk</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actTestDrawCity">
+   <property name="text">
+    <string>Test Draw City</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+1</string>
+   </property>
+  </action>
+  <action name="actTestDrawMap">
+   <property name="text">
+    <string>Test Draw Map</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+2</string>
+   </property>
+  </action>
+  <action name="actTestDrawMapStreets">
+   <property name="text">
+    <string>Test Draw Map w/ Streets</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+3</string>
+   </property>
+  </action>
+  <action name="actTestAbstractMap">
+   <property name="text">
+    <string>Test Abstract Map (from L2P)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+4</string>
+   </property>
+  </action>
+  <action name="actTestDijkstra">
+   <property name="text">
+    <string>Test Dijkstra</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+5</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>graphicsView</tabstop>
+  <tabstop>cbRouteCity2</tabstop>
+  <tabstop>cmdFindRoute</tabstop>
+  <tabstop>rbRoutingDistance</tabstop>
+  <tabstop>rbRoutingTime</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

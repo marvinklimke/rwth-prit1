@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>20</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>800</x>
+      <y>40</y>
+      <w>420</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>/Expression/
+--
+
+--
++Expression()
+/+~Expression()/
+/+evaluate() : double &lt;&lt;const&gt;&gt;/
+/+print() : std::string &lt;&lt;const&gt;&gt;/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>320</x>
+      <y>340</y>
+      <w>580</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>Const
+--
+-value : double
+--
++Const(val : double)
+/+~Const()/
+/+evaluate() : double &lt;&lt;const&gt;&gt;/
+/+print() : std::string &lt;&lt;const&gt;&gt;/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>260</y>
+      <w>440</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>200.0;10.0;200.0;30.0;10.0;30.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1100</x>
+      <y>340</y>
+      <w>560</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>Result
+--
+-operand : Expression*
+--
++Result(op : Expression*)
+/+~Result()/
+/+evaluate() : double &lt;&lt;const&gt;&gt;/
+/+print() : std::string &lt;&lt;const&gt;&gt;/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>980</x>
+      <y>260</y>
+      <w>440</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0;200.0;30.0;200.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>320</x>
+      <y>620</y>
+      <w>580</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>Add
+--
+-left : Expression*
+-right : Expression*
+--
++Add(summand1, summand2 : Expression*)
+/+~Add()/
+/+evaluate() : double &lt;&lt;const&gt;&gt;/
+/+print() : std::string &lt;&lt;const&gt;&gt;/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>260</y>
+      <w>440</w>
+      <h>400</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>200.0;10.0;200.0;170.0;10.0;170.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1100</x>
+      <y>620</y>
+      <w>560</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>Sub
+--
+-left : Expression*
+-right : Expression*
+--
++Sub(minuend, subtrahend : Expression*)
+/+~Sub()/
+/+evaluate() : double &lt;&lt;const&gt;&gt;/
+/+print() : std::string &lt;&lt;const&gt;&gt;/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>980</x>
+      <y>260</y>
+      <w>440</w>
+      <h>400</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0;200.0;170.0;200.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>320</x>
+      <y>920</y>
+      <w>580</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>Mul
+--
+-left : Expression*
+-right : Expression*
+--
++Mul(factor1, factor2 : Expression*)
+/+~Mul()/
+/+evaluate() : double &lt;&lt;const&gt;&gt;/
+/+print() : std::string &lt;&lt;const&gt;&gt;/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1100</x>
+      <y>920</y>
+      <w>560</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>Div
+--
+-left : Expression*
+-right : Expression*
+--
++Div(dividend, divisor : Expression*)
+/+~Div()/
+/+evaluate() : double &lt;&lt;const&gt;&gt;/
+/+print() : std::string &lt;&lt;const&gt;&gt;/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>260</y>
+      <w>440</w>
+      <h>700</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>200.0;10.0;200.0;320.0;10.0;320.0;10.0;330.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>980</x>
+      <y>260</y>
+      <w>440</w>
+      <h>700</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;320.0;200.0;320.0;200.0;330.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>320</x>
+      <y>1220</y>
+      <w>580</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>Pow
+--
+-b : Expression*
+-e : Expression*
+--
++Pow(base, exponent : Expression*)
+/+~Mul()/
+/+evaluate() : double &lt;&lt;const&gt;&gt;/
+/+print() : std::string &lt;&lt;const&gt;&gt;/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1100</x>
+      <y>1220</y>
+      <w>560</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>Sqrt
+--
+-diskr : Expression*
+
+--
++Sqrt(discriminant : Expression*)
+/+~Sqrt()/
+/+evaluate() : double &lt;&lt;const&gt;&gt;/
+/+print() : std::string &lt;&lt;const&gt;&gt;/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>980</x>
+      <y>260</y>
+      <w>440</w>
+      <h>1000</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;470.0;200.0;470.0;200.0;480.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>260</y>
+      <w>440</w>
+      <h>1000</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>200.0;10.0;200.0;470.0;10.0;470.0;10.0;480.0</additional_attributes>
+  </element>
+</diagram>

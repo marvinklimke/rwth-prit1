@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>702</width>
+    <height>611</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>StreetPlanner</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QGridLayout" name="gridLayout">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="horizontalSpacing">
+       <number>6</number>
+      </property>
+      <item row="21" column="0">
+       <widget class="QRadioButton" name="rbRoutingTime">
+        <property name="text">
+         <string>Travelling time in h</string>
+        </property>
+       </widget>
+      </item>
+      <item row="20" column="0">
+       <widget class="QRadioButton" name="rbRoutingDistance">
+        <property name="text">
+         <string>Distance in km</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="19" column="0">
+       <widget class="QLabel" name="lblRoutingPreference">
+        <property name="text">
+         <string>Routing Preference:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="0">
+       <widget class="Line" name="line">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="0">
+       <widget class="QCheckBox" name="cbHideTests">
+        <property name="text">
+         <string>Hide Test Buttons</string>
+        </property>
+       </widget>
+      </item>
+      <item row="22" column="0" rowspan="7">
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="2" column="0">
+       <widget class="QPushButton" name="pushButton">
+        <property name="text">
+         <string>Ausgabe</string>
+        </property>
+       </widget>
+      </item>
+      <item row="16" column="0">
+       <widget class="QPushButton" name="cmdClearMap">
+        <property name="text">
+         <string>Clear Map</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QPushButton" name="testDrawCity">
+        <property name="text">
+         <string>Test Draw City</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QPushButton" name="testDrawMapStreets">
+        <property name="text">
+         <string>Test Draw Map w/ Streets</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="0">
+       <widget class="QPushButton" name="cmdFillMap">
+        <property name="text">
+         <string>Fill Map NRW</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Eingabe:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="15" column="0">
+       <widget class="QPushButton" name="cmdFindRoute">
+        <property name="text">
+         <string>Find Route between</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" rowspan="29">
+       <widget class="QGraphicsView" name="graphicsView"/>
+      </item>
+      <item row="4" column="0">
+       <widget class="QPushButton" name="testDrawMap">
+        <property name="text">
+         <string>Test Draw Map</string>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="0">
+       <widget class="QPushButton" name="cmdAddStreet">
+        <property name="text">
+         <string>Add Street</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="0">
+       <widget class="QPushButton" name="cmdAddCity">
+        <property name="text">
+         <string>Add City</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0">
+       <widget class="QPushButton" name="testDijkstra">
+        <property name="text">
+         <string>Test Dijkstra</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QPushButton" name="testAbstractMap">
+        <property name="text">
+         <string>Test Abstract Map (Vorlage)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="17" column="0">
+       <widget class="QPushButton" name="cmdMapIoFile">
+        <property name="text">
+         <string>Load MapIO from files</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLineEdit" name="lineEdit">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="placeholderText">
+         <string>Lieblingsstadt</string>
+        </property>
+       </widget>
+      </item>
+      <item row="14" column="0">
+       <widget class="QComboBox" name="cbRouteCity2">
+        <property name="editable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="13" column="0">
+       <widget class="QComboBox" name="cbRouteCity1">
+        <property name="editable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="18" column="0">
+       <widget class="QPushButton" name="cmdSaveToDisk">
+        <property name="text">
+         <string>Save Map to disk</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>graphicsView</tabstop>
+  <tabstop>lineEdit</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>testDrawCity</tabstop>
+  <tabstop>testDrawMap</tabstop>
+  <tabstop>testDrawMapStreets</tabstop>
+  <tabstop>testAbstractMap</tabstop>
+  <tabstop>testDijkstra</tabstop>
+  <tabstop>cbHideTests</tabstop>
+  <tabstop>cmdAddCity</tabstop>
+  <tabstop>cmdAddStreet</tabstop>
+  <tabstop>cmdFillMap</tabstop>
+  <tabstop>cbRouteCity1</tabstop>
+  <tabstop>cbRouteCity2</tabstop>
+  <tabstop>cmdFindRoute</tabstop>
+  <tabstop>cmdClearMap</tabstop>
+  <tabstop>cmdMapIoFile</tabstop>
+  <tabstop>rbRoutingDistance</tabstop>
+  <tabstop>rbRoutingTime</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

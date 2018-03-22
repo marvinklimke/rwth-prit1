@@ -97,4 +97,4 @@ target_wrapper.*
 CMakeLists.txt.user*
 
 # Doxygen HTML output
-html
+html/
