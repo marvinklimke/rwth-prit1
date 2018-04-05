@@ -11,11 +11,11 @@ Dateien & Verzeichnisse
 
 | Datei/Verzeichnis   | Verwendung                                           |
 |---------------------|------------------------------------------------------|
-| `Versuch0[1-7]*`    | Eclipse Projekte der jeweiligen Versuche             |
+| `Versuch0[1-7].*`   | Eclipse Projekte der jeweiligen Versuche             |
 | `StreetPlanner`     | Qt Projekt von Versuch08                             |
 | `StreetPlanner_mkl` | Versuch08 mit einigen persönlichen Änderungen        |
 | `Fakultaet`         | Kleines Projekt zum Testen des Debuggers             |
-| `Testprogramm_*`    | Testprogramme für die jeweilige Entwicklungsumgebung |
+| `Testprogramm_.*`   | Testprogramme für die jeweilige Entwicklungsumgebung |
 | `LICENSE`           | MIT Lizenztext                                       |
 | `README.md`         | Diese Datei                                          |
 
