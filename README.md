@@ -5,7 +5,6 @@ Dieses Repository beinhaltet die Dateien aus dem Praktikum Informatik 1 im
 Studiengang Elektrotechnik, Informationsstechnik und Technische Informatik an
 der RWTH Aachen, welche ich im Sommersemester 2016 erstellt habe.
 
-
 Dateien & Verzeichnisse
 -----------------------
 
@@ -18,7 +17,6 @@ Dateien & Verzeichnisse
 | `Testprogramm_.*`   | Testprogramme für die jeweilige Entwicklungsumgebung |
 | `LICENSE`           | MIT Lizenztext                                       |
 | `README.md`         | Diese Datei                                          |
-
 
 Weitere Informationen
 ---------------------
